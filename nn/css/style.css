@@ -1,0 +1,178 @@
+@charset "utf-8";
+*{
+	margin:0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei UI", "Microsoft YaHei", SimHei, "\5B8B\4F53", simsun, sans-serif;
+	color:#292e38;
+	font-size: 14px;	
+}
+
+.layou{
+    min-width: 300px;
+    max-width: 720px;
+    margin:0 auto;
+    
+}
+.hea{
+	background: #323232;
+	height: 46px;
+	position: relative;
+}
+.hea ul li{
+	margin-top:6px;
+}
+.hea ul li.a{
+	float: left;
+	display: block;
+	margin-left:20px;
+}
+
+.hea ul li.b{
+	float: right;
+	display: block;
+	margin-right:20px;
+}
+
+
+
+
+
+.serch .serch_header {
+	background: #ff5702;
+	width: 100%;
+	height: 50px;  
+}
+
+/* .icon_search{
+     width: 30px;
+    height: 26px;
+    display: block;
+     position: absolute;
+    top: 53px;
+    left: 85px;
+    background: url(../img/27.png);
+
+} */
+
+.serch .serch_header ul{
+	width: 100%;
+	float: left;
+	padding-top: 6px;
+	margin-left: 7px;
+}
+.serch .serch_header ul li{
+	display: block;
+	float: left;
+	padding-left: 9px;
+}
+.serch .serch_header ul li input{
+	display: block;
+	
+	width:556px;
+	height: 34px;
+
+}
+.main{
+    width: 100%;
+    margin-top: 17px;
+   /*   border-bottom: 9px solid #9f9f9f;  */
+}
+
+ .lew .active {
+    background: #ff732d;
+}
+
+
+
+.lew ul li:hover {
+    background: rgba(248,166,218,0.5);
+
+
+
+}
+
+
+
+
+.zhan_left{
+    width: 25%;
+    height:500px;
+    
+    float: left;
+}
+
+.zhan_left .lew ul{
+    width: 85%;
+    height: 54%; 
+      background:#bbbbbb;
+
+}
+
+.zhan_left .lew .aa{
+   height: 50px;
+}
+.zhan_left .lew .bb{
+   height: 50px;
+}
+.zhan_left .lew li{
+     border-bottom: 0.7px solid white; 
+    
+}
+.zhan_left .lew p{
+    padding-top: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* #e1e0de  9f9f9f*/
+.zhan_right{
+    width: 75%;
+  
+float: right;
+
+}
+.zhan_right li{
+    height: 1550px;
+
+}
+.bb{
+    height: 400px;
+
+    overflow: hidden;
+}
+
+.zhan_right a{ 
+    width: 25%;
+
+    float:left;
+    color: #e77c7c;
+    text-decoration: none;
+
+}
+
+.zhan_right a img{
+    width: 92%;
+}
+.zhan_right a p{
+    padding-top: 4px;
+     text-align: center;
+    font-size: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
