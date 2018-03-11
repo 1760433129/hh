@@ -1,0 +1,534 @@
+@charset "utf-8";
+ *{
+       	margin: 0;
+       	padding: 0;  
+   }
+  a{
+    text-decoration: none;
+   }
+li{
+	list-style:none;
+}
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei UI", "Microsoft YaHei", SimHei, "\5B8B\4F53", simsun, sans-serif;
+	color: #666;
+}
+.souhu-head{
+	width: 100%;
+	height: 30px;
+	background-color: #222;
+}
+.shouhu-right ul{
+	height: 30px;
+	float: right;
+	padding-right: 46px;
+}
+.shouhu-right ul li{
+	display: block;
+	height: 30px;
+	float: left;
+	padding-left: 15px;
+	line-height: 30px;
+}
+.shouhu-right ul li a{
+	font-weight: bold;
+	color: white;
+	text-decoration:none;
+}
+.shouhu-right ul li a:hover{
+	color:red;
+}
+/* 寻找ul中的第二个li */
+.shouhu-right ul li:nth-child(2){
+	width:23px;
+	height: 24px;
+	margin-top: 5px;
+	background-image:url(../img/1.gif);
+}
+
+.logo-sh{
+	width: 1118px;
+	height:65px;
+/* 	background-color: #262626; */
+	position: relative;
+}
+
+.logo-sh form{
+	position: absolute;
+	padding-top: 25px;
+	left: 282px;
+}
+.logo-sh form input .nth-child(1){
+	display: block;
+	width: 471px;
+	height: 36px;
+	position: absolute;	
+}
+.logo-sh form input.tj{
+	width: 80px;
+	height: 36px;
+	float: left;
+	background-image: url(../img/2.gif);
+}
+.logo-sh form input.so{
+	width: 471px;
+	height: 36px;
+	float: left;
+	font-color: blue;
+}
+.logo-sh .sl{
+	height: 30px;
+	margin-left: 910px;
+	position: relative;
+}
+.logo-sh ul{
+	display: block;
+	height: 30px;
+	width: 350px;
+	float: left;
+	
+}
+.logo-sh ul li{
+	display: block;
+	height: 30px;
+   float: left;
+   padding-left:52px; 
+   margin-top: 26px;
+}
+.logo-sh ul li p1{
+	display:block;
+	width: 27px;
+	height: 28px;
+	background-image: url(../img/5.gif);
+	position: absolute;
+	top:30px;
+	margin-left: -40px;
+}
+.logo-sh ul li p2{
+	display:block;
+	width: 27px;
+	height: 28px;
+	background-image: url(../img/3.gif);
+	position: absolute;
+	top:30px;
+	margin-left: -40px;
+}
+.logo-sh ul li p3{
+	display:block;
+	width: 27px;
+	height: 28px;
+	background-image: url(../img/4.gif);
+	position: absolute;
+	top:30px;
+	margin-left: -40px;
+}
+.logo-sh .log{
+	width: 145px;
+	height:95px;
+	background-image:url(../img/6.gif);
+	position: absolute;
+	margin-left: 45px;
+	top: -30px;
+
+}
+
+.daohan{
+	width:1190px;
+	height: 75px;
+/* 	background-color: blue; */
+	border-top:1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
+	margin: 0 auto;
+	position: absolute;
+	top: 120px;
+	left:38px;
+}
+.daohan .wen-1{
+	width: 154px;
+	height: 45px;
+	border-right:1px solid #e5e5e5;
+	margin-top: 18px;
+	
+}
+.daohan .wen-1 ul{
+	width: 151px;
+	height: 22px;
+	float: left;
+}
+.daohan .wen-1 ul li{
+	float: left;
+	padding-left: 10px;
+}
+.daohan .wen-2 {
+	position: absolute;
+	height: 45px;
+	left: 188px;
+	float: left;
+	border-right:1px solid #e5e5e5;
+	
+}
+.daohan .wen-3 {
+	position: absolute;
+	height: 45px;
+	left: 379px;
+	float: left;
+	border-right:1px solid #e5e5e5;
+}
+.daohan .wen-4{
+	position: absolute;
+	height: 45px;
+	left: 551px;
+	float: left;
+	border-right:1px solid #e5e5e5;
+}
+.daohan .wen-5{
+	position: absolute;
+	height: 45px;
+	left: 741px;
+	float: left;
+	border-right:1px solid #e5e5e5;
+}
+
+.daohan .wen-6{
+	position: absolute;
+	height: 45px;
+	left: 915px;
+	float: left;
+	border-right:1px solid #e5e5e5;
+}
+
+.daohan .wen-7{
+	position: absolute;
+	height: 45px;
+	left: 1092px;
+}
+.lunbo{
+	width: 1029px;
+	height: 100px;
+	position: absolute;
+	top: 216px;
+	left: 45px;
+	background-image: url(../img/7.gif);
+}
+
+.lunbo-y{
+	width: 144px;
+	height: 100px;
+	position: absolute;
+	top: 216px;
+	left: 1083px;
+	background-image:url(../img/jubao08.gif);
+}
+.main{
+	width: 1180px;
+	height: 555px;
+	position: absolute;
+	left: 45px;
+	top: 330px;
+}
+.main-left{
+	width: 320px;
+	height: 555px;
+}
+.main-mid{
+	width:506px;
+	height: 555px;
+	position: absolute;
+	left: 350px;
+	top:0px;
+}
+.main-right{
+	width:301px;
+	height: 555px;
+	position: absolute;
+	left:880px;
+	top:0px;
+}
+.main-left-1{
+	width: 319px;
+	height: 212px;
+	background-image: url(../img/9.gif);
+}
+.main-left-2{
+	width: 320px;
+	height: 340px;
+	float: left;
+	padding-top: 5px;
+}
+.main-left-2 ul li{
+	width: 155px;
+	height:151px;
+	float: left;
+margin-left: 5px;
+}
+
+.main-mid p{
+	display: block;
+	width:506px;
+	height:30px;
+	border-bottom: 1px  solid #e5e5e5;
+}
+.main-right ul li{
+	width:301px;
+	height: 94px;
+	float: left;
+	margin-top: 10px;
+	border: 1px solid #e5e5e5;
+}
+
+.main-right .g-1{
+	width:301px;
+	height: 20px;
+	float: left;
+}
+.main-right .g-1 .a{
+	width: 4px;
+	height: 14px;
+	background-color: #fdd000;
+	float: left;
+	margin-top: 3px;
+	margin-right: 7px;
+}
+.span{
+	float: left;
+	padding-right: 4px;
+}
+.main-right .g-1 .a-1{
+	height: 11px;
+	width: 14px;
+	background-image: url(../img/18.gif);
+	float: right;
+	margin-top: 3px;
+	margin-left: 7px;
+}
+.main-right .g-1 .a-2{
+    left: 4px;
+	float: right;
+}
+.g-2{
+	margin:0 auto;
+}
+.r-1{
+   width: 270px;
+   height: 30px;
+   margin-left: 15px;
+   margin-top: 4px;
+}
+h4{
+   width: 270px;
+   height: 48px;
+    margin-left: 15px;
+}
+
+.r-1-1{
+   width: 26px;
+   height: 26px;
+   background-image: url(../img/10.gif);
+   float: left;
+}
+.r-1-2{
+   width: 26px;
+   height: 26px;
+   background-image: url(../img/11.gif);
+   float: left;
+}
+.r-1-3{
+   width: 26px;
+   height: 26px;
+   background-image: url(../img/12.gif);
+   float: left;
+}
+.r-1-4{
+   width: 26px;
+   height: 26px;
+   background-image: url(../img/13.gif);
+   float: left;
+}
+.r-1-5{
+   width: 26px;
+   height: 26px;
+   background-image: url(../img/11.gif);
+   float: left;
+}
+p{
+	float: left;
+	margin-left:10px;
+}
+em{
+	float: left;
+	margin-left:10px;
+}
+.p-1{
+	float:right;
+	padding-top: 7px;
+	font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*没有小于768px，是因为Bootstrap3以移动端优先设计*/
+
+/* 小屏幕（平板，大于等于768px） */
+@media (min-width: 768px) {
+	.tab-h2 {
+		font-size: 26px;
+	}
+	.tab-p {
+		font-size: 16px;
+	}
+	.text h3 {
+		font-size: 22px;
+	}
+	.text p {
+		font-size: 15px;
+	}
+	.tab2-text {
+		float: left;
+	}
+	.tab2-img {
+		float: right;
+	}
+	.jumbotron h1 {
+		font-size: 30px;
+	}
+	.jumbotron h4 {
+		font-size: 16px;
+	}
+	.info-content h4 {
+		font-size: 16px;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+	#about h3 {
+		font-size: 19px;
+	}
+	#about p {
+		font-size: 14px;
+	}
+}
+
+/* 中等屏幕（桌面显示器，大于等于992px） */
+@media (min-width: 992px) {
+	.tab-h2 {
+		font-size: 28px;
+	}
+	.tab-p {
+		font-size: 17px;
+	}
+	.text h3 {
+		font-size: 24px;
+	}
+	.text p {
+		font-size: 16px;
+	}
+	.jumbotron h1 {
+		font-size: 33px;
+	}
+	.jumbotron h4 {
+		font-size: 17px;
+	}
+	.info-content h4 {
+		font-size: 18px;
+	}
+	#about h3 {
+		font-size: 20px;
+	}
+	#about p {
+		font-size: 15px;
+	}
+}
+
+/* 大屏幕（大桌面显示器，大于等于1200px） */
+@media (min-width: 1200px) {
+	.tab-h2 {
+		font-size: 30px;
+	}
+	.tab-p {
+		font-size: 18px;
+	}
+	.text h3 {
+		font-size: 26px;
+	}
+	.text p {
+		font-size: 18px;
+	}
+	.jumbotron h1 {
+		font-size: 36px;
+	}
+	.jumbotron h4 {
+		font-size: 18px;
+	}
+	.info-content h4 {
+		font-size: 20px;
+	}
+	#about h3 {
+		font-size: 22px;
+	}
+	#about p {
+		font-size: 16px;
+	}
+}
