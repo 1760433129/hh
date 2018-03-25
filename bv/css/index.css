@@ -1,0 +1,115 @@
+ *{
+      margin: 0;
+      padding: 0;
+    }
+  li{
+    list-style: none;
+  }
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background:-moz-linear-gradient(top,#42692a,#222222);
+          /*   background: -ms-linear-gradient(top, #fff,  #0000ff);        IE 10
+          background:-moz-linear-gradient(top,#b8c4cb,#f6f6f8);火狐 
+                     background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#b8c4cb), to(#f6f6f8)) 谷歌*/
+ }
+ html{
+  font-size: 100px;
+ }
+ .sh{
+  width: 100%;
+  height: 4.7rem;
+  z-index: 999;
+  display: block;
+ }
+
+ .header{
+  width: 100%;
+  height:.5rem;
+ }
+ .hea .img1 img{
+  position: absolute;
+  display:block;
+  margin-top:.13rem;
+  width: .36rem;
+  height: .3rem;
+  margin-left: .16rem;
+ }
+  .hea p{
+  margin-top:.13rem;
+  font-size: .22rem;
+  float: right;
+  margin-right: .16rem;
+  color: #ffffff;
+ }
+ .hea .img2 img{
+  display: block;
+  float: right;
+  width: .71rem;
+  height: .3rem;
+  margin-top:.13rem;
+  padding-right: .3rem;
+ }
+ .fgx{
+ 	width: 100%;
+ 	height:3.93rem;
+	background: url(../image/播放_079_02.gif) no-repeat;
+	background-size:100%;
+ 	margin-top: .1rem;
+ 	border-top: 1px solid #9aa595;
+ }
+.diplay{
+  width: 100%;
+  height: .97rem;
+  position: absolute;
+  top: 3.44rem;
+/*   background: blue; */
+}
+.bofan img{
+  width:.7rem;
+  height: .7rem;
+  font-size: 100%;
+  position: absolute;
+  padding-top: .12rem;
+  padding-left: .4rem;
+}
+.xian{
+  width: 5.42rem;
+  height: .05rem;
+  background: white;
+  position: absolute;
+  margin-left: 1.47rem;
+  margin-top: .42rem;
+}
+.yuandian{
+  width: .27rem;
+  height: .27rem;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 1.67rem;
+  margin-top: .31rem;
+}
+.jdt .p1{
+  font-size: .22rem;
+  color: white;
+  float: left;
+  padding-left: 1.67rem;
+  margin-top: .6rem;
+}
+.jdt .p2{
+  font-size: .22rem;
+  color: white;
+  float: left;
+  padding-left: 3.6rem;
+  margin-top: .6rem;
+}
+.jdt img{
+  width: .38rem;
+  height: .38rem;
+  font-size: 100%;
+  position: absolute;
+   margin-top: .58rem;
+   margin-left: .22rem;
+}
