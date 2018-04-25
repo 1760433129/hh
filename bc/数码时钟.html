@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>推荐</title>
+    <script type="text/javascript">
+    function toDouble(num)
+    {
+    	if(num<10)
+    	{
+    		return '0'+num;
+    	}
+    	else
+    	{
+    		return ''+num;//前面要加空字符串
+    	}
+    }
+   window.onload=function()
+    {
+      var oBtn=document.getElementById('btn1');
+        var aImg=document.getElementsByTagName('img');
+        var i=0;
+     function undateTime()
+      {
+      	var oDate=new Date();
+      	var str=toDouble(oDate.getHours())+toDouble(oDate.getMinutes())+toDouble(oDate.getSeconds());//在前面加‘’空字符串是为了防止数字做数学相加
+      //alert(str);
+      	for(i=0;i<aImg.length;i++)
+      	{
+      		aImg[i].src='img/'+str.charAt(i)+'.jpg';
+      	}
+      }
+      setInterval(undateTime,1000);
+      undateTime();//解决刷新会变0
+    }
+      
+    </script>
+</head>
+<style>
+
+</style>
+<body>
+<img src="img/0.jpg" alt="">
+<img src="img/0.jpg" alt="">
+点
+<img src="img/0.jpg" alt="">
+<img src="img/0.jpg" alt="">
+分
+<img src="img/0.jpg" alt="">
+<img src="img/0.jpg" alt="">
+秒
+</body>
+</html>
+<!-- charAt  取一个数组中的第几个-->
