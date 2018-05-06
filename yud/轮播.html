@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>推荐</title>
+<script src="move.js"></script>
+    <script type="text/javascript">
+
+function getByClass(oParent,sClass)
+{
+  var aEle=document.getElementsByTagName('*');
+  var i=0;
+  var aResult=[];
+  for(i=0;i<aEle.length;i++)
+  {
+    if(aEle[i].className==sClass)
+    {
+      aResult.push(aEle[i]);
+    }
+  }
+  return aResult;
+}
+ 
+ window.onload=function()
+    {
+      var oDiv=document.getElementsByTagName('playimages');
+      var oBtnPrev=getByClass(oDiv,'prev')[0];
+      var oBtnNext=getByClass(oDiv,'next')[0];
+      var oMarkLeft=getByClass(oDiv,'mark_left')[0];
+      var oMarkRight=getByClass(oDiv,'mark_right')[0];
+
+
+      var oSmallUl=getByClass(oDiv,'small_pic')[0].getElementsByTagName('ul')[0];
+      var aSmallLi=oSmallUl.getElementsByTagName('li');
+      var oBigUl=getByClass(oDiv,'big_pic')[0];
+      var aBigLi=oBigUl.getElementsByTagName('li');
+      var iNon=0;
+      var iMinZindex=2;
+      var i=0;
+
+      oSmallUl.style.width=aSmallLi.length*aSmallLi[0].offsetWidth+'px';
+
+
+
+//左右按钮
+       oBtnPrev.onmouseover=oMarkLeft.onmouseover=function()//  oBtnPrev.onmouseover=oMarkLeft.onmouseover=解决移动小块会消失
+       {
+        startMove(oBtnPrev,'opacity',100)
+       }
+        oBtnPrev.onmouseout=oMarkLeft.onmouseout=function()
+       {
+        startMove(oBtnPrev,'opacity',0)
+       }
+
+
+        oBtnNext.onmouseover=oMarkRight.onmouseover=function()//  oBtnPrev.onmouseover=oMarkLeft.onmouseover=解决移动小块会消失
+       {
+        startMove(oBtnNext,'opacity',100)
+       }
+        oBtnNext.onmouseout=oMarkRight.onmouseout=function()
+       {
+        startMove(oBtnNext,'opacity',0)
+       }
+
+    //小图点击，大图显示
+    for(i=0;i<aSmallLi.length;i++)
+    {
+      aSmallLi[i].index=i;
+
+      aSmallLi[i].onmouseover=function()
+      {
+        startMove(this,'opacity',100)
+      }
+
+       aSmallLi[i].onmouseout=function()
+      {
+        if(this.index!=iNon)
+        {
+
+        startMove(this,'opacity',60)
+          
+        }
+      }
+
+    
+      aSmallLi[i].onclick=function()
+      {
+        if(this.index==iNon)return;
+         iNon=this.index;
+         for(i=0;i<aSmallLi.length;i++)
+         {
+          startMove(aSmallLi[i],'opacity',60)
+         }
+           startMove(this,'opacity',100);
+           aBigLi[this.index].style.zIndex=iMinZindex++;
+          aBigLi[this.index].style.height=0;
+          startMove(aBigLi[this.index],'height',oBigUl.offsetHeight);
+          if(iNon==0)
+          {
+            startMove(oSmallUl,'left',0);
+          }
+          else if(iNon==aSmallLi.length-1)
+          {
+            startMove(oSmallUl,-(iNon-2)*aSmallLi[0].offsetWidth)
+          }
+          else
+          {
+          startMove(oSmallUl,'left',-(iNon-1)*aSmallLi[0].offsetWidth)
+            
+          }
+
+
+         
+      }
+      //自动播放
+      function tab()
+      {
+        for(i=0;i<aSmallLi.length;i++)
+        {
+             startMove(aSmallLi[i],'opacity',60)
+        }
+
+        startMove(aSmallLi[iNon],'opacity',100)
+         aBigLi[iNon].style.zIndex=iMinZindex++;
+          aBigLi[iNon].style.height=0;
+          startMove(aBigLi[iNon],'height',oBigUl.offsetHeight);
+          if(iNon==0)
+          {
+            startMove(oSmallUl,'left',0);
+          }
+          else if(iNon==aSmallLi.length-1)
+          {
+            startMove(oSmallUl,'left',-(iNon-2)*aSmallLi[0].offsetWidth)
+          }
+          else
+          {
+          startMove(oSmallUl,'left',-(iNon-1)*aSmallLi[0].offsetWidth)
+            
+          }
+      }
+
+
+    oBtnPrev.onclick=function()
+    {
+      iNon--;
+      if(iNon==-1)
+      {
+        iNon=aSmallLi.length-1;
+      }
+      tab();
+    }
+
+
+    oBtnNext.onclick=function()
+    {
+      iNon++;
+      if(iNon==aSmallLi.length)
+      {
+        iNon=0;
+      }
+      tab();
+    }
+
+
+
+
+    }
+
+
+
+
+
+  }
+
+
+    </script>
+</head>
+<style>
+body{background: #666;}ul{padding: 0;margin: 0;}li{list-style:none;}img{border:0;}
+.play{width: 400px;height: 430px;margin: 50px auto 0;background: #999;font: 12px Arial}
+.big_pic{width: 400px;height: 320px;overflow: hidden;;border-bottom:1px solid #ccc;background: #222;position: relative; }
+.big_pic li{width: 400px;height: 320px;overflow: hidden;position: absolute;top: 0;left: 0;z-index: 0;background:  url(image/1.jpg)no-repeat center center}
+.mark_left{width: 200px;height: 320px;position: absolute;left: 0;top:0;background: red;filter:alpha(opacity:0);opacity:0;z-index: 3000; }
+.mark_right{width: 200px;height: 320px;position: absolute;left: 200px;top:0;background: green;filter:alpha(opacity:0);opacity:0;z-index: 3000; }
+.big_pic .prev{width: 60px;height: 60px;background: url(image/13.jpg)no-repeat;position: absolute;top: 130px;left: 10px;z-index:3001;filter:alpha(opacity:0);opacity:0;cursor: pointer;}
+.big_pic .next{width: 60px;height: 60px;background: url(image/14.jpg)no-repeat;position: absolute;top: 130px;right: 10px;z-index:3001;filter:alpha(opacity:0);opacity:0;cursor: pointer;}
+
+.big_pic .text{position: absolute;left: 10px;top: 302px;z-index: 3000;color: #ccc}
+.big_pic .length{position: absolute;right: 10px;bottom: 4px;z-index: 3000;color: #ccc}
+.big_pic .bg{width: 400px;height: 25px;background: #000;filter:alpha(opacity=60);opacity: 0.6;position: absolute;z-index: 2999;bottom: 0;left:0;}
+.small_pic{width: 380px;height: 94px;position: relative;top: 7px;left: 10px;overflow: hidden;}
+.small_pic ul{height: 94px;position: absolute;top: 0;left: 0;}
+.small_pic li{width: 120px;height: 94px;float: left;padding-right: 10px;background: url(image/1.jpg)no-repeat center center;cursor: pointer;filter:alpha(opacity:60);opacity:0.6;}
+.small_pic  img{width: 120px;height: 94px;}
+</style>
+<body>
+<div id="playimages" class="play">
+	<ul class="big_pic">
+	<div class="prev"></div>
+	<div class="next"></div>
+	<div class="text">加载图片说明。。。</div>
+	<div class="length">计算图片说明。。。</div>
+	<a class="mark_left" href="javascript:;"></a>
+	<a class="mark_right" href="javascript:;"></a>
+	<div class="bg"></div>
+	<li style="z-index:1;"><img src="image/3.jpg" alt=""></li>
+	<li><img src="image/4.jpg" alt=""></li>
+	<li><img src="image/5.jpg" alt=""></li>
+	<li><img src="image/6.jpg" alt=""></li>
+	<li><img src="image/7.jpg" alt=""></li>
+	<li><img src="image/8.jpg" alt=""></li>
+  <li><img src="image/6.jpg" alt=""></li>	
+	</ul>
+	<div class="small_pic">
+		<ul style="width:390px;">
+			<li style="filter:100;opacity:1;"><img src="image/42.jpg" alt=""></li>
+			<li><img src="image/41.jpg" alt=""></li>
+			<li><img src="image/42.jpg" alt=""></li>
+			<li><img src="image/43.jpg" alt=""></li>
+      <li><img src="image/42.jpg" alt=""></li>
+      <li><img src="image/43.jpg" alt=""></li>
+			<li><img src="image/41.jpg" alt=""></li>
+
+		</ul>
+	</div>
+	
+</div>
+
+
+</body>
+</html>
+<!-- //label给整个加入事件，input可以给单独加入事件 -->
